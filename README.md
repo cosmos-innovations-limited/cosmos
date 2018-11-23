@@ -42,3 +42,7 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+Slack integration with Circle CI hook
+
+https://hooks.slack.com/services/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
