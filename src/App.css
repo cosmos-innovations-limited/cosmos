@@ -48,7 +48,8 @@ body {
   border: 1px solid #00897B;
 }
 
-.btn-primary:hover {
+.btn-primary:hover,
+.btn-primary:active {
   border: 1px solid #80CBC4;
   background: #80CBC4;
   color: #222;

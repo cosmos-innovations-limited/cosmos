@@ -10,6 +10,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      // isDisabled: true,
       subscriberData: {
         id: Date.now(),
         firstName: '',
@@ -52,7 +53,20 @@ class App extends Component {
   }
 
   submitEmailHandler () {
-    http.post(this.state.subscriberData);
+    if (this.state.subscriberData.email && this.state.subscriberData.firstName) {
+      http.post(this.state.subscriberData);
+      this.setState({
+        subscriberData: {
+          id: this.state.subscriberData.id,
+          firstName: '',
+          lastName: '',
+          email: ''
+        }
+      })
+    } else {
+      alert('At least Email and First name is required to subscribe!')
+    }
+
   }
 
   render() {
