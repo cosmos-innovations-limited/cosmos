@@ -71,7 +71,7 @@ class App extends Component {
             <input onChange={(event) => this.lastNameInputHandler(event)} type="text" className="form-control" placeholder="Last Name" aria-label="Last Name" aria-describedby="Last Name" value={this.state.subscriberData.lastName}/>
           </div>
           <button className="btn btn-primary" onClick={() => this.submitEmailHandler()}>Stay updated</button>
-          <p className="display-5">Yes, It is possible!</p>
+          <p className="display-5">Solving problems for good!</p>
         </div>
       </div>
     );

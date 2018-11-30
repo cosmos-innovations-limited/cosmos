@@ -1,0 +1,158 @@
+[debug] [2018-11-30T22:29:12.335Z] ----------------------------------------------------------------------
+[debug] [2018-11-30T22:29:12.338Z] Command:       /Users/Vik/.nvm/versions/node/v9.7.0/bin/node /Users/Vik/.nvm/versions/node/v9.7.0/bin/firebase deploy
+[debug] [2018-11-30T22:29:12.338Z] CLI Version:   6.1.1
+[debug] [2018-11-30T22:29:12.338Z] Platform:      darwin
+[debug] [2018-11-30T22:29:12.338Z] Node Version:  v9.7.0
+[debug] [2018-11-30T22:29:12.339Z] Time:          Sat Dec 01 2018 11:29:12 GMT+1300 (NZDT)
+[debug] [2018-11-30T22:29:12.339Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-11-30T22:29:12.358Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-11-30T22:29:12.358Z] > authorizing via signed-in user
+[debug] [2018-11-30T22:29:12.358Z] [iam] checking project cosmos-d63ab for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]
+[debug] [2018-11-30T22:29:12.360Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-11-30T22:29:12.360Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2018-11-30T22:29:12.791Z] <<< HTTP RESPONSE 200
+[debug] [2018-11-30T22:29:12.811Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/cosmos-d63ab:testIamPermissions  
+
+[debug] [2018-11-30T22:29:14.349Z] <<< HTTP RESPONSE 200
+[debug] [2018-11-30T22:29:14.351Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/cosmos-d63ab  
+ 
+[debug] [2018-11-30T22:29:15.085Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'cosmos-d63ab'...
+[info] 
+[info] i  deploying database, storage, functions, hosting
+[info] Running command: npm --prefix "$RESOURCE_DIR" run lint
+[info] ✔  functions: Finished running predeploy script.
+[info] i  database: checking rules syntax...
+[debug] [2018-11-30T22:29:20.275Z] >>> HTTP REQUEST PUT https://cosmos-d63ab.firebaseio.com/.settings/rules.json?dryRun=true  
+ {
+  /* Visit https://firebase.google.com/docs/database/security to learn more about security rules. */
+  "rules": {
+    ".read": false,
+    ".write": false
+  }
+}
+
+[debug] [2018-11-30T22:29:21.844Z] <<< HTTP RESPONSE 200
+[info] ✔  database: rules syntax for database cosmos-d63ab is valid
+[debug] [2018-11-30T22:29:21.846Z] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/cosmos-d63ab  
+ 
+[debug] [2018-11-30T22:29:23.585Z] <<< HTTP RESPONSE 200
+[info] i  storage: checking storage.rules for compilation errors...
+[debug] [2018-11-30T22:29:23.589Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/cosmos-d63ab:test  
+
+[debug] [2018-11-30T22:29:25.383Z] <<< HTTP RESPONSE 200
+[info] ✔  storage: rules file storage.rules compiled successfully
+[debug] [2018-11-30T22:29:25.385Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase serve --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "dependencies": {
+    "firebase-admin": "~6.0.0",
+    "firebase-functions": "^2.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.12.0",
+    "eslint-plugin-promise": "^3.6.0"
+  },
+  "private": true
+}
+[info] i  functions: ensuring necessary APIs are enabled...
+[debug] [2018-11-30T22:29:25.386Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/cloudfunctions.googleapis.com/projectSettings/cosmos-d63ab?view=CONSUMER_VIEW  
+ 
+[debug] [2018-11-30T22:29:25.387Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/runtimeconfig.googleapis.com/projectSettings/cosmos-d63ab?view=CONSUMER_VIEW  
+ 
+[debug] [2018-11-30T22:29:27.488Z] <<< HTTP RESPONSE 200
+[debug] [2018-11-30T22:29:27.537Z] <<< HTTP RESPONSE 200
+[info] ✔  functions: all necessary APIs are enabled
+[debug] [2018-11-30T22:29:27.538Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/cosmos-d63ab  
+ 
+[debug] [2018-11-30T22:29:28.888Z] <<< HTTP RESPONSE 200
+[debug] [2018-11-30T22:29:28.888Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/743926293071:getServerAppConfig  
+ 
+[debug] [2018-11-30T22:29:29.700Z] <<< HTTP RESPONSE 200
+[debug] [2018-11-30T22:29:29.702Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/cosmos-d63ab/versions  
+
+[debug] [2018-11-30T22:29:32.686Z] <<< HTTP RESPONSE 200
+[info] i  storage: uploading rules storage.rules...
+[debug] [2018-11-30T22:29:32.687Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/cosmos-d63ab/rulesets  
+
+[debug] [2018-11-30T22:29:34.649Z] <<< HTTP RESPONSE 200
+[debug] [2018-11-30T22:29:34.649Z] [rules] created ruleset projects/cosmos-d63ab/rulesets/a2b1a669-bf84-4ab4-8cde-693d5988c38d
+[info] i  functions: preparing functions directory for uploading...
+[debug] [2018-11-30T22:29:34.651Z] >>> HTTP REQUEST GET https://runtimeconfig.googleapis.com/v1beta1/projects/cosmos-d63ab/configs  
+ 
+[debug] [2018-11-30T22:29:35.415Z] <<< HTTP RESPONSE 200
+[info] i  hosting[cosmos-d63ab]: beginning deploy...
+[info] i  hosting[cosmos-d63ab]: found 15 files in build
+[debug] [2018-11-30T22:29:35.628Z] [hosting] hash cache [YnVpbGQ] load error: lines is not defined
+[debug] [2018-11-30T22:29:35.739Z] [hosting] hash cache [YnVpbGQ] stored for 15 files
+[debug] [2018-11-30T22:29:35.740Z] [hosting][hash queue][FINAL]
+[debug] [2018-11-30T22:29:35.740Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/cosmos-d63ab/versions/58a212e17acda217:populateFiles  
+ <request body omitted>
+[debug] [2018-11-30T22:29:37.333Z] <<< HTTP RESPONSE 200
+[debug] [2018-11-30T22:29:37.334Z] [hosting][populate queue][FINAL]
+[debug] [2018-11-30T22:29:37.334Z] [hosting] uploads queued: 0
+[debug] [2018-11-30T22:29:37.334Z] [hosting][upload queue][FINAL]
+[info] ✔  hosting[cosmos-d63ab]: file upload complete
+[debug] [2018-11-30T22:29:37.335Z] [hosting] deploy completed after 1723ms
+[info] i  database: releasing rules...
+[debug] [2018-11-30T22:29:37.699Z] >>> HTTP REQUEST PUT https://cosmos-d63ab.firebaseio.com/.settings/rules.json  
+ {
+  /* Visit https://firebase.google.com/docs/database/security to learn more about security rules. */
+  "rules": {
+    ".read": false,
+    ".write": false
+  }
+}
+
+[debug] [2018-11-30T22:29:38.433Z] <<< HTTP RESPONSE 200
+[info] ✔  database: rules for database cosmos-d63ab released successfully
+[debug] [2018-11-30T22:29:38.434Z] [rules] releasing firebase.storage/cosmos-d63ab.appspot.com with ruleset projects/cosmos-d63ab/rulesets/a2b1a669-bf84-4ab4-8cde-693d5988c38d
+[debug] [2018-11-30T22:29:38.434Z] >>> HTTP REQUEST PATCH https://firebaserules.googleapis.com/v1/projects/cosmos-d63ab/releases/firebase.storage/cosmos-d63ab.appspot.com  
+
+[debug] [2018-11-30T22:29:40.011Z] <<< HTTP RESPONSE 200
+[debug] [2018-11-30T22:29:40.011Z] [rules] updated release projects/cosmos-d63ab/releases/firebase.storage/cosmos-d63ab.appspot.com
+[info] ✔  storage: released rules storage.rules to firebase.storage/cosmos-d63ab.appspot.com
+[debug] [2018-11-30T22:29:40.013Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/projects/cosmos-d63ab/locations/-/functions  
+ 
+[debug] [2018-11-30T22:29:41.298Z] <<< HTTP RESPONSE 200
+[debug] [2018-11-30T22:29:41.303Z] [
+  {
+    "config": {
+      "public": "build",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "cosmos-d63ab"
+    },
+    "site": "cosmos-d63ab",
+    "version": "sites/cosmos-d63ab/versions/58a212e17acda217"
+  }
+]
+[info] i  hosting[cosmos-d63ab]: finalizing version...
+[debug] [2018-11-30T22:29:41.303Z] >>> HTTP REQUEST PATCH https://firebasehosting.googleapis.com/v1beta1/sites/cosmos-d63ab/versions/58a212e17acda217?updateMask=status  
+
+[debug] [2018-11-30T22:29:42.781Z] <<< HTTP RESPONSE 200
+[debug] [2018-11-30T22:29:42.781Z] [hosting] finalized version for cosmos-d63ab:
+[info] ✔  hosting[cosmos-d63ab]: version finalized
+[info] i  hosting[cosmos-d63ab]: releasing new version...
+[debug] [2018-11-30T22:29:42.782Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/cosmos-d63ab/releases?version_name=sites/cosmos-d63ab/versions/58a212e17acda217  
+
