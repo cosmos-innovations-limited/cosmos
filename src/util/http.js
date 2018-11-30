@@ -4,7 +4,7 @@ import axios from 'axios'
 // let config
 let http
 
-const endpoint = 'https://cosmos-d63ab.firebaseio.com/.json';
+const endpoint = 'https://cosmos-d63ab.firebaseio.com/subscribers.json';
 
 export default {
 
