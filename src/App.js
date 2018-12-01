@@ -80,7 +80,7 @@ class App extends Component {
             <div className="input-group-prepend">
               <span className="input-group-text" id="basic-addon1">@</span>
             </div>
-            <input onChange={(event) => this.emailInputHandler(event)} type="text" className="form-control" placeholder="Enter your e-mail ..." aria-label="Email" aria-describedby="email" value={this.state.subscriberData.email}/>
+            <input onChange={(event) => this.emailInputHandler(event)} type="text" className="form-control" placeholder="E-mail" aria-label="Email" aria-describedby="email" value={this.state.subscriberData.email}/>
             <input onChange={(event) => this.firstNameInputHandler(event)} type="text" className="form-control" placeholder="First Name" aria-label="First Name" aria-describedby="First Name" value={this.state.subscriberData.firstName}/>
             <input onChange={(event) => this.lastNameInputHandler(event)} type="text" className="form-control" placeholder="Last Name" aria-label="Last Name" aria-describedby="Last Name" value={this.state.subscriberData.lastName}/>
           </div>
