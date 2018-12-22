@@ -44,85 +44,106 @@
     0% {
         left: 0;
         top: 0;
+        transform: scale(0.51);
     }
     3% {
         left: 10%;
         top: 15%;
+        transform: scale(0.82);
     }
     6% {
         left: 30%;
         top: 40%;
+        transform: scale(0.33);
     }
     10% {
         left: 60%;
         top: 5;
+        transform: scale(0.95);
     }
     13% {
         left: 80%;
         top: 30%;
+        transform: scale(0.26);
     }
     17% {
         left: 60%;
         top: 70%;
+        transform: scale(0.88);
     }
     20% {
         left: 30%;
         top: 10%;
+        transform: scale(1.9);
     }
     23% {
         left: 50%;
         top: 90%;
+        transform: scale(1);
     }
     27% {
         left: 65%;
         top: 30%;
+        transform: scale(1.7);
     }
     31% {
         left: 80%;
         top: 90%;
+        transform: scale(2.1);
     }
     35% {
         left: 50%;
         top: 80%;
+        transform: scale(1.5);
     }
     38% {
         left: 10%;
+        transform: scale(1.1);
         top: 10%;
     }
     41% {
         left: 30%;
         top: 60%;
+        transform: scale(0.5);
     }
     45% {
         left: 70%;
+        transform: scale(0.1);
         top: 70%;
     }
     48% {
         left: 40%;
         top: 10%;
+        transform: scale(0.7);
     }
     52% {
         left: 80%;
+        transform: scale(1.1);
         top: 70%;
     }
     56% {
         left: 60%;
+        transform: scale(0.8);
         top: 20%;
     }
     59% {
         left: 40%;
+        transform: scale(1.1);
         top: 90%;
     }
     62% {
         left: 70%;
+        transform: scale(0.61);
         top: 30%;
     }
     64% {
         left: 55%;
+        transform: scale(0.9);
         top: 60%;
     }
     68% {
         left: 20%;
+        transform: scale(1.1);
         top: 10%;
     }
     71% {
@@ -131,6 +152,7 @@
     }
     75% {
         left: 10%;
+        transform: scale(2.1);
         top: 10%;
     }
     78% {
@@ -139,6 +161,7 @@
     }
     81% {
         left: 20%;
+        transform: scale(1.1);
         top: 5;
     }
     83% {
@@ -147,6 +170,7 @@
     }
     85% {
         left: 30%;
+        transform: scale(1.4);
         top: 70%;
     }
     89% {
@@ -155,6 +179,7 @@
     }
     92% {
         left: 20%;
+        transform: scale(0.7);
         top: 90%;
     }
     95% {
@@ -163,6 +188,7 @@
     }
     98% {
         left: 80%;
+        transform: scale(1);
         top: 90%;
     }
     100% {
