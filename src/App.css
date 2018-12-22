@@ -1,6 +1,6 @@
 body {
   /* background: #A7FFEB; */
-  background: #222;
+  background: #000;
   /* background: #B2DFDB; */
 }
 
@@ -8,6 +8,8 @@ body {
   text-align: center;
   /* background: #A7FFEB; // Teal 50 A100 google material design */
   padding: 0 0.25rem 1rem 0.25rem;
+  background-image: url('./assets/images/nightsky.png');
+  min-height: 80vmin;
 }
 
 .App-logo {
@@ -37,6 +39,10 @@ body {
   text-shadow: 1px 1px #f8f8f8;
 }
 
+.form-control--lastName {
+  z-index: 100;
+}
+
 .btn-primary {
   outline: none;
   padding: 0.125rem 1rem;
@@ -44,16 +50,14 @@ body {
   line-height: 2rem;
   margin: 0.5rem 1rem;
   border-radius: 2rem;
-  color: #222;
-  /* background: #00897B; */
-  border: 1px solid #00897B;
+  color: #000;
+  background: #fff;
 }
 
 .btn-primary:hover,
 .btn-primary:active {
-  border: 1px solid #80CBC4;
-  /* background: #80CBC4; */
-  color: #222;
+  background: #ffc06d;
+  color: #000;
   transform: scale(1.025);
 }
 
@@ -80,7 +84,6 @@ body {
   margin-top: 1rem;
   font-size: 2rem;
   font-weight: 500;
-  background: #000;
   color: #ffc06d;
 }
 

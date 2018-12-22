@@ -1,9 +1,73 @@
 
 
-// .navbar-dark {
-//   background: yellow;
-// }
+$primary-font-color: #ffc06d;
+$primary-shadow-color: #fff;
+$secondary-shadow-color: yellow;
 
+.navbar-brand {
+  color: $primary-font-color;
+}
+.nav-link{
+  color: $primary-font-color;
+}
+
+.cosmos-floating {
+  color: $primary-font-color;
+  text-shadow: 5px 5px 10px $primary-shadow-color, 6px 6px 3px $secondary-shadow-color;
+  font-size: 5rem;
+  font-weight: 500;
+  position: absolute;
+  animation-name: freetextflow;
+  animation-duration: 350s;
+}
+.cosmos-floating1 {
+  color: $primary-font-color;
+  text-shadow: 5px 5px 10px $primary-shadow-color, 6px 6px 3px $secondary-shadow-color;
+  font-size: 10rem;
+  font-weight: 600;
+  position: absolute;
+  animation-name: freetextflow;
+  animation-duration: 260s;
+}
+
+.cosmos-floating2 {
+  color: $primary-font-color;
+  text-shadow: 5px 5px 10px $primary-shadow-color, 6px 6px 3px $secondary-shadow-color;
+  font-size: 7rem;
+  font-weight: 500;
+  position: absolute;
+  animation-name: freetextflow;
+  animation-duration: 210s;
+}
+.cosmos-floating3 {
+  color: $primary-font-color;
+  text-shadow: 5px 5px 10px $primary-shadow-color, 6px 6px 3px $secondary-shadow-color;
+  font-size: 3rem;
+  font-weight: 500;
+  position: absolute;
+  animation-name: freetextflow;
+  animation-duration: 310s;
+}
+
+.cosmos-floating4 {
+  color: $primary-font-color;
+  text-shadow: 5px 5px 10px $primary-shadow-color, 6px 6px 3px $secondary-shadow-color;
+  font-size: 5rem;
+  font-weight: 500;
+  position: absolute;
+  animation-name: freetextflow;
+  animation-duration: 270s;
+}
+
+.cosmos-floating5 {
+  color: $primary-font-color;
+  text-shadow: 5px 5px 10px $primary-shadow-color, 6px 6px 3px $secondary-shadow-color;
+  font-size: 5rem;
+  font-weight: 500;
+  position: absolute;
+  animation-name: freetextflow(70);
+  animation-duration: 320s;
+}
 .header-image {
   width: 10rem;
   height: 10rem;
@@ -13,7 +77,7 @@
   // padding: 1rem;
   position: absolute;
   animation-name: freeflow;
-  animation-duration: 300s;
+  animation-duration: 330s;
 }
 // .header-image-overlay {
 //   width: 100%;
@@ -37,8 +101,6 @@
     animation-duration: 300s;
   }
 }
-
-
 @keyframes freeflow
 {
     0% {
@@ -193,6 +255,113 @@
     }
     100% {
         left: 100%;
+        top: 10%;
+    }
+}
+
+
+@keyframes freetextflow
+{
+    0% {
+        left: 0;
+        top: 0;
+        transform: scale(0.51);
+    }
+    10% {
+        left: 60%;
+        top: 5;
+        transform: scale(0.95);
+    }
+    13% {
+        left: 80%;
+        top: 30%;
+        transform: scale(0.26);
+    }
+    17% {
+        left: 60%;
+        top: 70%;
+        transform: scale(0.88);
+    }
+    27% {
+        left: 65%;
+        top: 30%;
+        transform: scale(1.7);
+    }
+    31% {
+        left: 80%;
+        top: 90%;
+        transform: scale(2.1);
+    }
+    35% {
+        left: 50%;
+        top: 80%;
+        transform: scale(1.5);
+    }
+    38% {
+        left: 10%;
+        transform: scale(1.1);
+        top: 10%;
+    }
+    52% {
+        left: 80%;
+        transform: scale(1.1);
+        top: 70%;
+    }
+    56% {
+        left: 60%;
+        transform: scale(0.8);
+        top: 20%;
+    }
+    59% {
+        left: 40%;
+        transform: scale(1.1);
+        top: 90%;
+    }
+    62% {
+        left: 70%;
+        transform: scale(0.61);
+        top: 30%;
+    }
+    64% {
+        left: 55%;
+        transform: scale(0.9);
+        top: 60%;
+    }
+    68% {
+        left: 20%;
+        transform: scale(1.1);
+        top: 10%;
+    }
+    71% {
+        left: 0;
+        top: 0;
+    }
+    75% {
+        left: 10%;
+        transform: scale(2.1);
+        top: 10%;
+    }
+    83% {
+        left: 25%;
+        top: 30%;
+    }
+    85% {
+        left: 30%;
+        transform: scale(1.4);
+        top: 70%;
+    }
+    89% {
+        left: 70%;
+        top: 10%;
+    }
+    92% {
+        left: 20%;
+        transform: scale(0.7);
+        top: 90%;
+    }
+    100% {
+        left: 100%;
+        transform: scale(1);
         top: 10%;
     }
 }
