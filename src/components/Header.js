@@ -2,6 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Link} from "react-router-dom"
 import './header.scss'
 import {Home} from "../containers/pages/home"
+import About from "../containers/pages/about"
+import Blog from "../containers/pages/blog"
 
 function header () {
   return (
@@ -28,7 +30,9 @@ function header () {
             </form>
           </div>
         </nav>
-
+        <div  className="header-image-overlay">
+          <img src={require('../assets/images/shani.png')} className= "header-image" alt="Cosmos Innovations header"></img>
+        </div>
         <hr />
 
         <Route exact path="/" component={Home} />
@@ -37,22 +41,6 @@ function header () {
       </div>
     </Router>
   )
-}
-
-function About() {
-  return (
-    <div>
-      <h2>About</h2>
-    </div>
-  );
-}
-
-function Blog() {
-  return (
-    <div>
-      <h2>Blog</h2>
-    </div>
-  );
 }
 
 export default header;

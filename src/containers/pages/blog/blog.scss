@@ -1,0 +1,36 @@
+body {
+  background: #000;
+  /* background: #B2DFDB; */
+}
+
+.blog {
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.c12 {
+  width: 100%;
+}
+.c6 {
+  width: 50%;
+}
+
+.blog__post--image {
+  width: 10rem;
+  height: 10rem;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
