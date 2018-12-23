@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link} from "react-router-dom"
 import './header.scss'
+import '../assets/animate.css';
 import {Home} from "../containers/pages/home"
 import About from "../containers/pages/about"
 import Blog from "../containers/pages/blog"
@@ -38,6 +39,7 @@ function header () {
           <span className="cosmos-floating3">m</span>
           <span className="cosmos-floating4">O</span>
           <span className="cosmos-floating5">S</span>
+          <img src={require('../assets/images/shani.png')} className= "header-image2" alt="Cosmos Innovations header"></img>
           <img src={require('../assets/images/shani.png')} className= "header-image1" alt="Cosmos Innovations header"></img>
         </div>
         <hr />

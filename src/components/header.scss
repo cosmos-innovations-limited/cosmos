@@ -20,6 +20,7 @@ $secondary-shadow-color: yellow;
   position: absolute;
   animation-name: freetextflow-default;
   animation-duration: 180s;
+  animation-iteration-count: infinite;
   font-weight: 500;
   font-size: 2rem;
   left:100%;
@@ -31,6 +32,7 @@ $secondary-shadow-color: yellow;
   position: absolute;
   animation-name: freetextflow-default;
   animation-duration: 165s;
+  animation-iteration-count: infinite;
   font-size: 2rem;
   font-weight: 500;
   left:100%;
@@ -43,6 +45,7 @@ $secondary-shadow-color: yellow;
   position: absolute;
   animation-name: freetextflow-default;
   animation-duration: 150s;
+  animation-iteration-count: infinite;
   font-size: 2rem;
   font-weight: 500;
   left:100%;
@@ -54,6 +57,7 @@ $secondary-shadow-color: yellow;
   position: absolute;
   animation-name: freetextflow-default;
   animation-duration: 135s;
+  animation-iteration-count: infinite;
   font-size: 2rem;
   font-weight: 500;
   left:100%;
@@ -62,10 +66,11 @@ $secondary-shadow-color: yellow;
 
 .cosmos-floating4 {
   color: $primary-font-color;
-  text-shadow: 5px 5px 10px $primary-shadow-color, 6px 6px 1px $secondary-shadow-color;
+  text-shadow: 5px 5px 10px $primary-shadow-color, 3px 3px 1px $secondary-shadow-color;
   position: absolute;
   animation-name: freetextflow-default;
   animation-duration: 120s;
+  animation-iteration-count: infinite;
   font-size: 2rem;
   font-weight: 500;
   left:100%;
@@ -74,10 +79,11 @@ $secondary-shadow-color: yellow;
 
 .cosmos-floating5 {
   color: $primary-font-color;
-  text-shadow: 5px 5px 10px $primary-shadow-color, 6px 6px 1px $secondary-shadow-color;
+  text-shadow: 5px 5px 10px $primary-shadow-color, 3px 3px 1px $secondary-shadow-color;
   position: absolute;
   animation-name: freetextflow-default;
   animation-duration: 105s;
+  animation-iteration-count: infinite;
   font-size: 2rem;
   font-weight: 500;
   left:100%;
@@ -89,8 +95,8 @@ $secondary-shadow-color: yellow;
   // margin: auto;
   // padding: 1rem;
   position: absolute;
-  animation-name: freeflow;
-  animation-duration: 20s;
+  animation-name: freeflow1;
+  animation-duration: 4s;
   border-radius: 2px;
   z-index: 1;
   left:49.5%;
@@ -177,12 +183,25 @@ $secondary-shadow-color: yellow;
   // margin: auto;
   // padding: 1rem;
   position: absolute;
-  animation-name: freeflow1;
+  animation-name: freeflow;
+  animation-iteration-count: infinite;
   animation-duration: 190s;
   border-radius: 2px;
-  z-index: 10;
+  z-index: 101;
   left:49.5%;
   top: 6%;
+}
+.header-image2 {
+  width: 10rem;
+  height: 10rem;
+  // margin: auto;
+  // padding: 1rem;
+  position: absolute;
+  animation-name: freeflow;
+  animation-iteration-count: infinite;
+  animation-duration: 230s;
+  border-radius: 2px;
+  z-index: 1;
 }
 // .header-image-overlay {
 //   width: 100%;
@@ -194,17 +213,16 @@ $secondary-shadow-color: yellow;
 // }
 
 @media (max-width: 600px) {
-  .header-image {
-    width: 5rem;
-    height: 5rem;
-    border-radius: 2px;
-    z-index: 1;
-    // margin: auto;
-    // padding: 1rem;
-    position: absolute;
-    animation-name: freeflow;
-    animation-duration: 300s;
+
+  .cosmos-floating,
+  .cosmos-floating1,
+  .cosmos-floating2,
+  .cosmos-floating3,
+  .cosmos-floating4,
+  .cosmos-floating5 {
+    font-size: 1.25rem;
   }
+
   .header-image1 {
     width: 5rem;
     height: 5rem;
@@ -213,8 +231,20 @@ $secondary-shadow-color: yellow;
     // margin: auto;
     // padding: 1rem;
     position: absolute;
-    animation-name: freeflow1;
+    animation-name: freeflow;
     animation-duration: 300s;
+  }
+  .header-image2 {
+    width: 3rem;
+    height: 3rem;
+    // margin: auto;
+    // padding: 1rem;
+    position: absolute;
+    animation-name: freeflow;
+    animation-iteration-count: infinite;
+    animation-duration: 190s;
+    border-radius: 2px;
+    z-index: 10;
   }
   .header-image {
     width: 7rem;
@@ -222,8 +252,8 @@ $secondary-shadow-color: yellow;
     // margin: auto;
     // padding: 1rem;
     position: absolute;
-    animation-name: freeflow;
-    animation-duration: 20s;
+    animation-name: freeflow1;
+    animation-duration: 4s;
     border-radius: 2px;
     z-index: 1;
     left:49.5%;
@@ -231,7 +261,7 @@ $secondary-shadow-color: yellow;
   }
 
 }
-@keyframes freeflow1
+@keyframes freeflow
 {
     0% {
         left: 0;
@@ -661,33 +691,23 @@ $secondary-shadow-color: yellow;
     }
 }
 
-@keyframes freeflow
+@keyframes freeflow1
 {
     0% {
         left: 0;
         top: 0;
         transform: scale(0.51);
     }
-    27% {
-        left: 65%;
-        top: 30%;
-        transform: scale(1.7);
-    }
-    52% {
-        left: 80%;
-        transform: scale(1.1);
+    50% {
+        left: 30%;
+        transform: scale(3.1);
         top: 70%;
-    }
-    75% {
-        left: 10%;
-        transform: scale(2.1);
-        top: 10%;
     }
     100% {
         transform: scale(1);
         border-radius: 2px;
         z-index: 1;
         left:49.5%;
-        top: 6%;
+        top: 17%;
     }
 }

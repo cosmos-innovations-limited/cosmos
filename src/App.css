@@ -75,17 +75,21 @@ body {
 }
 
 .display-1 {
+  color: #ffc06d;
   margin-top: 5rem;
   font-size: 10rem;
   font-weight: 600;
-  text-shadow: 5px 5px 10px #fff, 6px 6px 3px yellow,  1px 10px 500px #ff3;
-  color: #ffc06d;
-  animation: herotext 300s;
+  text-shadow: 5px 5px 10px #fff, 6px 6px 3px yellow,  1px 10px 400px #ff3;
+  animation: herotext 200s;
+  animation-iteration-count: infinite;
   /* text-shadow: 2px 2px 4px #fff, 1px 1px 3px yellow; */
 }
 
 @keyframes herotext {
   0% {
+    color: #000;
+  }
+  2% {
     color: #ffc06d;
   }
   20% {
@@ -101,7 +105,7 @@ body {
     color: skyblue;
   }
   85% {
-    color: green
+    color: #fff
   }
   100% {
     color: #ffc06d;
