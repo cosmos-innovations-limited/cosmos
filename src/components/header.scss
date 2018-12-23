@@ -252,7 +252,7 @@ $secondary-shadow-color: yellow;
     // margin: auto;
     // padding: 1rem;
     position: absolute;
-    animation-name: freeflow1;
+    animation-name: freeflow2;
     animation-duration: 4s;
     border-radius: 2px;
     z-index: 1;
@@ -692,6 +692,26 @@ $secondary-shadow-color: yellow;
 }
 
 @keyframes freeflow1
+{
+    0% {
+        left: 0;
+        top: 0;
+        transform: scale(0.51);
+    }
+    50% {
+        left: 30%;
+        transform: scale(3.1);
+        top: 70%;
+    }
+    100% {
+        transform: scale(1);
+        border-radius: 2px;
+        z-index: 1;
+        left:49.5%;
+        top: 6%;
+    }
+}
+@keyframes freeflow2
 {
     0% {
         left: 0;
