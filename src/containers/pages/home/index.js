@@ -80,7 +80,7 @@ export class Home extends Component {
             </div>
             <input onChange={(event) => this.emailInputHandler(event)} type="text" className="form-control" placeholder="E-mail" aria-label="Email" aria-describedby="email" value={this.state.subscriberData.email}/>
             <input onChange={(event) => this.firstNameInputHandler(event)} type="text" className="form-control" placeholder="First Name" aria-label="First Name" aria-describedby="First Name" value={this.state.subscriberData.firstName}/>
-            <input onChange={(event) => this.lastNameInputHandler(event)} type="text" className="form-control" placeholder="Last Name" aria-label="Last Name" aria-describedby="Last Name" value={this.state.subscriberData.lastName}/>
+            <input onChange={(event) => this.lastNameInputHandler(event)} type="text" className="form-control form-control--lastName" placeholder="Last Name" aria-label="Last Name" aria-describedby="Last Name" value={this.state.subscriberData.lastName}/>
           </div>
           <button className="btn btn-primary" onClick={() => this.submitEmailHandler()}>Stay updated</button>
           <p className="display-5">Solving problems for good!</p>

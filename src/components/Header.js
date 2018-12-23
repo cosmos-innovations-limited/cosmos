@@ -31,12 +31,14 @@ function header () {
           </div>
         </nav>
         <div  className="header-image-overlay">
-          <span className="cosmos-floating">C<span className="cosmos-floating1">O
-          <span className="cosmos-floating2">S</span></span>
-          <span className="cosmos-floating3">M</span>
-          <span className="cosmos-floating4">O</span>
-          <span className="cosmos-floating5">S</span></span>
           <img src={require('../assets/images/shani.png')} className= "header-image" alt="Cosmos Innovations header"></img>
+          <span className="cosmos-floating">C</span>
+          <span className="cosmos-floating1">O</span>
+          <span className="cosmos-floating2">S</span>
+          <span className="cosmos-floating3">m</span>
+          <span className="cosmos-floating4">O</span>
+          <span className="cosmos-floating5">S</span>
+          <img src={require('../assets/images/shani.png')} className= "header-image1" alt="Cosmos Innovations header"></img>
         </div>
         <hr />
 
