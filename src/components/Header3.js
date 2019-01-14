@@ -1,12 +1,11 @@
 import React from 'react';
-import {Route, Link, NavLink, Switch, Redirect} from "react-router-dom"
+import {Route, Link, NavLink} from "react-router-dom"
 import './header.scss'
 import '../assets/animate.css';
 import {Home} from "../containers/pages/home"
 import About from "../containers/pages/about"
 import Blog from "../containers/pages/blog"
 import NewPost from "./NewPost/NewPost.js"
-import FullPost from "./FullPost/FullPost.js"
 
 const header = (props) => {
 
@@ -57,13 +56,8 @@ const header = (props) => {
 
           <Route path="/" exact component={Home} />
           <Route path="/about" component={About} />
-          <Switch>
-            <Route path="/blog" exact component={Blog} />
-            <Route path="/blog/newpost" component={NewPost} />
-            <Route path="/blog/:id" exact component={FullPost} />
-            <Redirect from="/path1" to="/blog" />
-            <Route render={() => <h1 style={{font:"8rem",fontWeight: "Bold", color: "#ffc06d"}}> 404 Note Found</h1>} />
-          </Switch>
+          <Route path="/blog" exact component={Blog} />
+          <Route path="/blog/newpost" component={NewPost} />
         </div>
     );
 }

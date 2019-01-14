@@ -71,7 +71,7 @@ export class Home extends Component {
   render() {
     return (
       <div className="App">
-        <div classMame="App-body">
+        <div className="App-body">
           <h1 className="display-1">Cosmos</h1>
           <h3 className="display-5">Project Future: Under Construction</h3>
           <div className="input-group mb-3 input-subscribe">

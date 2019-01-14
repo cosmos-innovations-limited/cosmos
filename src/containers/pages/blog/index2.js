@@ -8,6 +8,22 @@ import Posts from "./Posts/Posts";
 
 class Blog extends Component {
 
+  // constructor (props) {
+  //   super(props);
+  //   console.log('lifecycle 1: Inside Constructor')
+  //   this.state = {
+  //     posts: [],
+  //     selectedPostId: null,
+  //     error: false
+  //   }
+  // }
+
+  // state = {
+  //   posts: [],
+  //   selectedPostId: null,
+  //   error: false
+  // }
+
   componentWillMount () {
     console.log('lifecycle 2: (unsafe) Inside ComponentWillMount')
   }
@@ -23,10 +39,29 @@ class Blog extends Component {
     console.log('lifecycle error 2: Inside componentDidCatch')
   }
 
-  componentDidMount () {
-    console.log('lifecycle 4: Inside ComponentDidMount')
-    console.log(this.props)
-  }
+  // componentDidMount () {
+  //   console.log('lifecycle 4: Inside ComponentDidMount')
+  //   axios.get('https://jsonplaceholder.typicode.com/posts')
+  //   .then(res => {
+  //     // console.log(res);
+  //     const posts = res.data.slice(0, 4);
+  //     const updatedPosts = posts.map(post => {
+  //       return {
+  //         ...post,
+  //         author: 'Vikas'
+  //       }
+  //     });
+  //     this.setState({ posts: updatedPosts});
+  //   })
+  //   .catch(error => {
+  //     console.log(error);
+  //     this.setState({error: true});
+  //   });
+  // }
+  //
+  // postSelectedHandler = (id) => {
+  //   this.setState({selectedPostId: id});
+  // }
 
   componentWillReceiveProps(nextProps) {
     console.log('lifecycle 5: (unsafe) Inside componentWillReceiveProps method')
@@ -61,7 +96,7 @@ class Blog extends Component {
     return (
       <div className="blog">
         <h2 className="c12 display-3">N<sup>th</sup> Dimension</h2>
-        <small className="c12 display-5">proudly presented by Cosmos Innovations</small>
+        <small className="c12 display-5" style={{"margin-bottom": "10rem"}}>proudly presented by Cosmos Innovations</small>
         <Posts />
       </div>
     );

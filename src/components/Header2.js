@@ -1,16 +1,40 @@
 import React from 'react';
-import {Route, Link, NavLink, Switch, Redirect} from "react-router-dom"
+import {Route, Link} from "react-router-dom"
 import './header.scss'
 import '../assets/animate.css';
 import {Home} from "../containers/pages/home"
 import About from "../containers/pages/about"
 import Blog from "../containers/pages/blog"
 import NewPost from "./NewPost/NewPost.js"
-import FullPost from "./FullPost/FullPost.js"
 
-const header = (props) => {
+// class header extends React.Component {
 
+const header = () => {
+
+  // state = {
+  //   showAboutMenu: false
+  // }
+
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     showAboutMenu: false
+  //   };
+  // }
+  //
+  // handleHover = (event) => {
+  //   console.log('mouse hover')
+  //   this.setState({ showAboutMenu: true });
+  // };
+  //
+  // handleLeave = (event) => {
+  //   console.log('mouse left')
+  //   this.setState({ showAboutMenu: false });
+  // };
+
+  // render() {
     return (
+      // <Router>
         <div>
           <nav className="navbar navbar-expand-lg">
             <Link to="/about" className="navbar-brand">COSMOS <br />INNOVATIONS</Link>
@@ -21,14 +45,14 @@ const header = (props) => {
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
               <ul className="navbar-nav mr-auto nav-pills">
                 <li className="nav-item active">
-                  <NavLink to="/" exact activeClassName="nav-item-active" className="nav-link">Home <span className="sr-only">(current)</span></NavLink>
+                  <Link to="/" className="nav-link">Home <span className="sr-only">(current)</span></Link>
                 </li>
                 <li className="nav-item dropdown">
-                  <NavLink to="/blog" activeClassName="nav-item-active"  exact className="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Blog</NavLink>
+                  <Link to="/blog" className="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Blog</Link>
                   <div className="dropdown-menu animated flipInX delay-8s">
                     <a className="dropdown-item" href="/blog">N<sup>th</sup> Dimension</a>
                     <Link className="dropdown-item" to={{
-                      pathname: '/blog/newpost',
+                      pathname: this.props.match.url + '/newpost',
                       hash: '#submit',
                       search: '?quick-submit=true'
                     }}>New Post</Link>
@@ -57,15 +81,12 @@ const header = (props) => {
 
           <Route path="/" exact component={Home} />
           <Route path="/about" component={About} />
-          <Switch>
-            <Route path="/blog" exact component={Blog} />
-            <Route path="/blog/newpost" component={NewPost} />
-            <Route path="/blog/:id" exact component={FullPost} />
-            <Redirect from="/path1" to="/blog" />
-            <Route render={() => <h1 style={{font:"8rem",fontWeight: "Bold", color: "#ffc06d"}}> 404 Note Found</h1>} />
-          </Switch>
+          <Route path="/blog" exact component={Blog} />
+          <Route path="/blog/newpost" component={NewPost} />
         </div>
+      // </Router>
     );
+  // }
 }
 
 export default header;

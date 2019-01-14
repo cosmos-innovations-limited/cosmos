@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import './assets/animate.css';
 import './App.css';
 import Header from './components/Header.js';
+import {BrowserRouter} from "react-router-dom";
 
 class App extends Component {
 
@@ -20,13 +21,13 @@ class App extends Component {
     };
   }
 
-
-
   render() {
     return (
-      <div className="App">
-        <Header />
-      </div>
+      <BrowserRouter>
+        <div className="App">
+          <Header />
+        </div>
+      </BrowserRouter>
     );
   }
 }

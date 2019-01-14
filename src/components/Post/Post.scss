@@ -1,6 +1,9 @@
 .Post {
     width: 45%;
+    // width: 95%;
+    // height: 90%;
     padding: 16px;
+    color: #000;
     background: #fff;
     text-align: center;
     border: 1px solid #eee;
@@ -14,8 +17,17 @@
 
 .Post:hover,
 .Post:active {
-    background-color: #C0DDF5;
+    background: rgba(#fff0fd, 0.5);
+    text-decoration: none;
+    color: #ffc06d;
 }
+//
+// .postSummary {
+//   text-decoration: none;
+//   &:hover {
+//     text-decoration: none;
+//   }
+// }
 
 .Author {
     margin: 16px 0;
