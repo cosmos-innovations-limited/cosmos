@@ -28,8 +28,5 @@
   ],
   "devDependencies": {
     "firebase-tools": "^6.1.1"
-  },
-  "engines": {
-    "node": "8"
   }
 }
