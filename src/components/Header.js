@@ -4,6 +4,7 @@ import './header.scss'
 import '../assets/animate.css';
 import {Home} from "../containers/pages/home"
 import About from "../containers/pages/about"
+import Sports from "../containers/pages/sports"
 import Blog from "../containers/pages/blog"
 import NewPost from "./NewPost/NewPost.js"
 import FullPost from "./FullPost/FullPost.js"
@@ -35,11 +36,14 @@ const header = (props) => {
                     <Link className="dropdown-item" to="/blog/videos">Videos</Link>
                   </div>
                 </li>
+                <li className="nav-item active">
+                  <NavLink to="/sports" exact activeClassName="nav-item-active" className="nav-link">Sports</NavLink>
+                </li>
               </ul>
-              <form className="form-inline my-2 my-lg-0">
+              {/* <form className="form-inline my-2 my-lg-0">
                 <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
                 <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-              </form>
+              </form> */}
             </div>
           </nav>
           <div  className="header-image-overlay">
@@ -57,12 +61,14 @@ const header = (props) => {
 
           <Route path="/" exact component={Home} />
           <Route path="/about" component={About} />
+          <Route path="/sports" component={Sports} />
           <Switch>
             <Route path="/blog" exact component={Blog} />
             <Route path="/blog/newpost" component={NewPost} />
             <Route path="/blog/:id" exact component={FullPost} />
+            <Route path="/user/:id" exact component={FullPost} />
             <Redirect from="/path1" to="/blog" />
-            <Route render={() => <h1 style={{font:"8rem",fontWeight: "Bold", color: "#ffc06d"}}> 404 Note Found</h1>} />
+            {/* <Route render={() => <h1 style={{font:"8rem",fontWeight: "Bold", color: "#ffc06d"}}></h1>} /> */}
           </Switch>
         </div>
     );
