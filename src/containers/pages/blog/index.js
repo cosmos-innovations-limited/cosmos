@@ -1,4 +1,6 @@
-import React, { Component } from 'react';
+import React, {
+  Component
+} from 'react';
 import "./blog.scss"
 import Posts from "./Posts/Posts";
 // import Post from '../../../components/Post/Post';
@@ -8,12 +10,12 @@ import Posts from "./Posts/Posts";
 
 class Blog extends Component {
 
-  componentWillMount () {
+  componentWillMount() {
     console.log('lifecycle 2: (unsafe) Inside ComponentWillMount')
   }
 
-  static getDerivedStateFromProps (props, state) {
-      console.log('lifecycle 2a & 5a: Inside getDerivedStateFromProps')
+  static getDerivedStateFromProps(props, state) {
+    console.log('lifecycle 2a & 5a: Inside getDerivedStateFromProps')
   }
 
   static getDerivedStateFromError(error) {
@@ -23,7 +25,7 @@ class Blog extends Component {
     console.log('lifecycle error 2: Inside componentDidCatch')
   }
 
-  componentDidMount () {
+  componentDidMount() {
     console.log('lifecycle 4: Inside ComponentDidMount')
     console.log(this.props)
   }
@@ -50,20 +52,23 @@ class Blog extends Component {
     console.log('lifecycle 8: Inside componentDidUpdate method')
   }
 
-  componentWillUnMount () {
+  componentWillUnmount() {
     console.log('lifecycle 9: Inside componentWillUnMount')
   }
 
-  render () {
+  render() {
 
     console.log('lifecycle 3: Inside render method');
 
-    return (
-      <div className="blog">
-        <h2 className="c12 display-3">N<sup>th</sup> Dimension</h2>
-        <small className="c12 display-5">proudly presented by Cosmos Innovations</small>
-        <Posts />
-      </div>
+    return ( <
+      div className = "blog" >
+      <
+      h2 className = "c12 display-3" > N < sup > th < /sup> Dimension</h2 >
+      <
+      small className = "c12 display-5" > proudly presented by Cosmos Innovations < /small> <
+      Posts / >
+      <
+      /div>
     );
   }
 }

@@ -4,18 +4,17 @@ body {
 }
 
 .Posts {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    width: 80%;
-    // background: #fff;
-    margin: auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  width: 80%;
+  margin: auto;
 }
 
 .post-summary {
   width: 50%;
   text-decoration: none;
-  // background: #fff;
+
   &:hover {
     text-decoration: none;
     // background: green;
@@ -41,6 +40,7 @@ body {
 .c12 {
   width: 100%;
 }
+
 .c6 {
   width: 50%;
 }
@@ -59,6 +59,7 @@ body {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
